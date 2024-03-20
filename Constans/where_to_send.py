@@ -1,0 +1,1 @@
+EMAIL_TO_RECIVE_INFO = "expectumpatronum5@gmail.com"
