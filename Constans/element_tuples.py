@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 FIND_ANYTHING = (By.XPATH, "//body")
-LT_LANGUAGE_BUTTON = (By.LINK_TEXT, "Lietuva")
+LT_LANGUAGE_BUTTON = (By.XPATH, "//a[@href='?country=lt']")
 CITIES_DROPBOX = (By.ID, "cities")
 VILNIUS_OPTION_IN_DROPBOX = (By.XPATH, "//option[@value='Vilnius']")
 SELECT_DYZEL = (By.XPATH, "//th[2]")

@@ -1,4 +1,5 @@
 import os
+import time
 
 from Utilities.BaseClass import BaseClass
 from dotenv import load_dotenv
@@ -9,8 +10,8 @@ def main():
         setup()
         main_obj = BaseClass(index)
         main_obj.landing_page.change_language()
-        # main_obj.landing_page.exit_script()
         main_obj.landing_page.choose_city()
+        # main_obj.landing_page.exit_script()
         main_obj.landing_page.scrap_content()
         main_obj.landing_page.open_new_tab()
         main_obj.gmail_page.open_gmail()
