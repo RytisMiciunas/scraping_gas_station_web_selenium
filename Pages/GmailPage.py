@@ -26,8 +26,8 @@ class GmailPage:
     def open_gmail(self):
         try:
             self.driver.get(uri.MAIL_URL)
-        except:
-            self.log.error("Failed to open new web tab")
+        except Exception as e:
+            self.log.error(f"Failed to open new web tab in web browser:  {e}  ")
             self.exit_script()
 
     def log_in_gmail(self):
@@ -42,8 +42,8 @@ class GmailPage:
         try:
             self.driver.find_element(*element_tuples.GMAIL_CREATE_NEW_LETTER_BUTTON).click()
             self.log.info("Logged into gmail successfully")
-        except:
-            self.log.error("Failed to log into gmail")
+        except Exception as e:
+            self.log.error(f"Failed to log into gmail. error: {e}")
             self.exit_script()
 
     def excel_to_json(self):
@@ -108,6 +108,6 @@ class GmailPage:
         try:
             self.wait.until(EC.presence_of_element_located(element_tuples.GMAIL_SUCCESS_POPUP))
             self.log.info("email send successfully")
-        except:
-            self.log.error("Didn't send the email")
+        except Exception as e:
+            self.log.error(f"Didn't send the email. error: {e}")
             self.exit_script()
