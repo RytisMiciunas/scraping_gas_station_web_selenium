@@ -1,6 +1,6 @@
 import csv
 import json
-import os
+import sys
 
 from datetime import date
 from Constans import uri, element_tuples, arrays
@@ -21,13 +21,13 @@ class GmailPage:
 
     def exit_script(self):
         self.driver.quit()
-        os._exit(0)
+        sys.exit(1)
 
     def open_gmail(self):
         try:
             self.driver.get(uri.MAIL_URL)
         except Exception as e:
-            self.log.error(f"Failed to open new web tab in web browser:  {e}  ")
+            self.log.error(f"Failed to open new web tab in web browser: {e}")
             self.exit_script()
 
     def log_in_gmail(self):
@@ -97,7 +97,7 @@ class GmailPage:
         return letter_content
 
     def fill_and_send_mail_using_selenium(self):
-        self.driver.implicitly_wait(4)
+        self.driver.implicitly_wait(5)
         try:
             self.driver.find_element(*element_tuples.GMAIL_MAIL_RECIEVER).send_keys(self.receiver)
         except:

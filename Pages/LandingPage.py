@@ -74,7 +74,7 @@ class LandingPage:
             ninty_eight = table[index + 3].text
             if ninty_eight == "-":
                 ninty_eight = "empty"
-            lpg = table[i + 4].text
+            lpg = table[index + 4].text
             if lpg == "-":
                 lpg = "empty"
             new_tuple = (gas_station_name, dyzel, ninty_five, ninty_eight, lpg)

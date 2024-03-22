@@ -17,7 +17,7 @@ GMAIL_MAIL_RECIEVER = (By.XPATH, "//input[@aria-label='Recipients']")
 GMAIL_MAIL_SUBJECT = (By.XPATH, "//input[@name='subjectbox']")
 GMAIL_MAIL_CONTENT = (By.XPATH, "//div[@role='textbox']")
 GMAIL_MAIL_SEND_BUTTON = (By.XPATH, "//div[contains(@role, 'button') and text() = 'Send']")
-GMAIL_SUCCESS_POPUP = (By.XPATH, "//span[contains(text(), 'Message sent')]")
+GMAIL_SUCCESS_POPUP = (By.XPATH, "//span[@id='link_undo']")
 
 
 
